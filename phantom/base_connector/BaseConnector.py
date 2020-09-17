@@ -123,7 +123,7 @@ class BaseConnector(object):
         return return_val
 
     def save_container(self, container):
-        container_id = self.container_artifact_id
+        container_id = self.starting_container_id
         self.starting_container_id += 1
         return (phantom.APP_SUCCESS, 'Container saved', container_id)
 
@@ -156,7 +156,8 @@ class BaseConnector(object):
         self.logger.info('BaseConnector.set_status_save_progress - Status: {}, Message: {}'.format(status, message))
         return self.status
 
-    def send_progress(self, message):
+    def send_progress(self, message, *unnamed_format, **named_format):
+        message = message.format(*unnamed_format, **named_format)
         self.progress_message = message
         self.logger.info('BaseConnector.send_progress - Progress: {}'.format(message))
         return
