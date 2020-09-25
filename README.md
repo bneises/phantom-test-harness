@@ -22,6 +22,15 @@ Check /examples for examples on how to use this.
 
 That's it! Then start testing your code. Check the examples folder for a few ideas.
 
+## PyCharm Setup
+You can add this to your PyCharm interpreter using the following instructions:
+1. Once you clone the phantom-test-harness, you can go into the PyCharm Preferences of your app
+2. Go to “Project: <your-project>” -> “Project Interpreter”
+3. Click the gear for the “Project Interpreter” field and select “Show All…”
+5. Then you can select or create a new local interpreter
+6. Then you can click on the “directory tree” button on the bottom to show the paths of the interpreter.
+7. You can then add the path to your phantom-test-harness location using the "+" button.
+
 # Options
 
 There are a lot of options that you can use depending on your scenario. Some options are strictly for debugging purposes, and some are for making sure that your app doesn't break. Options are defined in BaseConnector.py:init(). There are comments as to which each are for. Some probably need more clarity. Please see examples for some ideas of how to use and access these.
